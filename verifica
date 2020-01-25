@@ -1,0 +1,7 @@
+import("stdfaust.lib");
+//la sintesi sottrattiva è un modello di sintesi sonora nella quale una sorgente sonora ricca di armoniche viene filtrata da un filtro che sottrae o le bande di frequenza
+//lo spettroscopio ci mostra il contenuto del suono nel dominio della frequenza, sull'asse delle x le frequenze, sull'asse delle y l'ampiezza; lo oscilloscopio ci mostra il contenuto del suono nel dominio del tempo sull'asse delle x abbiamo il tempo, sull'asse delle y le ampiezze.
+// lowpass= passa basso 
+// dato un punto di taglio il filtro di primo ordine attenua 6 dB per ottava 
+
+process = no.noise : fi.lowpass(4,6000) : fi.highpass(4,6000);
